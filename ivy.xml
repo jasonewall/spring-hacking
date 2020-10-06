@@ -1,0 +1,16 @@
+<ivy-module version="2.0">
+    <info organisation="jasonewall" module="spring-restful-api-example"/>
+    <configurations>
+        <conf name="runtime"/>
+        <conf name="compile" extends="runtime"/>
+        <conf name="development" extends="runtime" visibility="private"/>
+    </configurations>
+    <dependencies>
+        <dependency org="org.springframework.boot" name="spring-boot-starter-web" rev="2.1.6.RELEASE" conf="runtime->default">
+            <exclude module="spring-boot-starter-tomcat"/>
+        </dependency>
+        <dependency org="org.springframework.boot" name="spring-boot-starter-jetty" rev="2.1.6.RELEASE" conf="runtime->default"/>
+
+        <dependency org="org.springframework.boot" name="spring-boot-devtools" rev="2.1.6.RELEASE" conf="development->default"/>
+    </dependencies>
+</ivy-module>
